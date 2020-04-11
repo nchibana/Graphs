@@ -29,21 +29,6 @@ class Graph:
         """
         return self.vertices[vertex_id]
 
-
-    def get_grandchildren(self, vertex_id, grandchildren=[]):
-        """
-        Get all neighbors and neighbors of neighbors of a vertex.
-        """
-        if self.vertices[vertex_id] is None:
-            return
-
-        neighbors = self.vertices[vertex_id]
-        grandchildren.append(neighbors)
-
-        self.get_grandchildren(vertex_id, grandchildren)
-
-        return grandchildren
-
     def bft(self, starting_vertex):
         """
         Print each vertex in breadth-first order
@@ -89,7 +74,7 @@ class Graph:
             current_node = stack.pop()
         ## if it hasn't been visited:
             if current_node not in visited:
-                print(current_node)
+                # print(current_node)
                 ### mark it as visited
                 visited.add(current_node)
                 ### get its neighbors
