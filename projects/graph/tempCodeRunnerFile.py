@@ -1,0 +1,1 @@
+self.dft_recursive(next(it_neighbors))
