@@ -142,7 +142,7 @@ class SocialGraph:
             current_id = q.dequeue()
         ## if we haven't visited it yet
             if current_id not in visited:
-                ## mark as visited
+                ## mark as visited  
                 visited.add(current_id)
                 ## get its neighbors
                 friends = self.get_friends(current_id)
